@@ -7,7 +7,7 @@ gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets https://github.com/rails/sass-rails.git
-gem 'sass-rails', '~> 4.0.3'#, :git => 'git://github.com/rails/sass-rails.git'#, '~> 4.0.3'
+gem 'sass-rails'#, '~> 4.0.3'#, :git => 'git://github.com/rails/sass-rails.git'#, '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -41,3 +41,10 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'therubyracer'
+
+gem 'materialize-sass'
+
+#富文本框编辑器
+gem 'rails_kindeditor'
+
+gem 'sass', '~> 3.3'

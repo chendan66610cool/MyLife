@@ -1,0 +1,44 @@
+<a class="btn-floating btn-large waves-light btn modal-trigger" href="#NewJournal" style="float:right"><i class="material-icons">add</i></a>
+<!-- Modal Structure -->
+  <div id="NewJournal" class="modal bottom-sheet" style="width:70%">
+    <div class="modal-content">
+      <h4>New Journal</h4>
+      <p>
+      	<%= form_for @journal, :html => {:class => "col s12"} do |f| %>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="title" type="text" class="validate" name="journal[title]">
+	          <label for="title">Title</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <%= f.kindeditor :content %>
+	        </div>
+	      </div>
+	      <button class="btn waves-effect waves-light" type="submit" style="float:right;" name="action">Submit</button>
+	    <% end %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+  	<% @journals.each do |journal| %>
+      
+        <div class="col s12 m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <!-- <span class="card-title activator"><%= journal.title %><i class="material-icons right">more_vert</i></span> -->
+              <span class="card-title"><%= journal.title %></span>
+              <p><%= raw journal.content %></p>
+            </div>
+            <!-- <div class="card-reveal">
+		      <span class="card-title grey-text text-darken-4"><%= journal.title %><i class="material-icons right">close</i></span>
+		      <p><%= raw journal.content %></p>
+		    </div> -->
+          </div>
+        </div>
+      
+    <% end %>
+    </div>
+            
+            
